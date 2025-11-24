@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可爱小猪出没</title>
+    <style>
+        body { margin: 0; padding: 20px; text-align: center; background: #fdf2f8; font-family: "Arial Rounded MT Bold", sans-serif; }
+        .text { font-size: 32px; color: #e53e3e; margin: 50px 0; animation: blink 1.5s infinite; }
+        .pig-container { position: relative; height: 200px; overflow: hidden; }
+        .pig { 
+            position: absolute; 
+            bottom: 0; 
+            left: -100px; 
+            font-size: 80px; 
+            animation: crawl 8s linear infinite; 
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        @keyframes crawl { 
+            0% { left: -100px; transform: scaleX(-1); } /* 从左进入（朝右） */
+            45% { left: calc(100% - 80px); transform: scaleX(-1); } /* 爬到最右边 */
+            50% { transform: scaleX(1); } /* 转身朝左 */
+            95% { left: -100px; transform: scaleX(1); } /* 爬回左边 */
+            100% { transform: scaleX(-1); } /* 再次转身 */
+        }
+    </style>
+</head>
+<body>
+    <div class="text">傻子才信👀</div>
+    <div class="pig-container">
+        <div class="pig">🐷</div>
+    </div>
+</body>
+</html>
